@@ -43,7 +43,6 @@ confirmation = raw_input('You are about to download {} videos to {}\nWould you l
     len(video_urls), os.path.abspath(args.destination)))
 
 if confirmation.lower() in ['y', '']:
-if True:
     for u in video_urls:
         yt = pytube.YouTube(u)
         vid = yt.streams.filter(file_extension='mp4').order_by('res').last() # grab the highest resolution mp4 file
